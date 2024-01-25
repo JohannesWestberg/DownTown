@@ -68,7 +68,6 @@ body {
 .hamburger-visible {
    flex-direction: column;
    flex-wrap: wrap;
-   row-gap: 1rem;
    width: 100.1%;
    height: 18rem;
    margin-left: -1.5%;
@@ -81,10 +80,18 @@ body {
 .hamburger-visible > a {
     display: flex;
     height: 1rem;
-    padding: 1rem;
+    padding: 1.4rem;
+    width: 100%;
     line-height: 13px;
-    font-size: x-large;
+    font-size: medium;
     margin-top: 8px;
+}
+
+.hamburger-visible > a:hover {
+   background-color: #ddd;
+   color:#013a90;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 
@@ -110,6 +117,12 @@ body {
     color: #0068ff;
 }
 
+.nav-cell1:hover {
+    color:#013a90;
+    cursor: pointer;
+    text-decoration: underline;
+ }
+
 .nav-cell2 {
     display: grid;
     grid-area: 1 / 3 / 2 / 4;
@@ -117,6 +130,12 @@ body {
     text-align: center;
     color: #0068ff;
 }
+
+.nav-cell2:hover {
+    color:#013a90;
+    cursor: pointer;
+    text-decoration: underline;
+ }
 
 .nav-cell3 {
     display: grid;
@@ -126,6 +145,12 @@ body {
     color: #0068ff;
 }
 
+.nav-cell3:hover {
+    color:#013a90;
+    cursor: pointer;
+    text-decoration: underline;
+ }
+
 .nav-cell4 {
     display: grid;
     background-color: transparent;
@@ -134,9 +159,15 @@ body {
     grid-area: 1 / 5 / 2 / 6;
 }
 
+.nav-cell4:hover {
+    color:#013a90;
+    cursor: pointer;
+    text-decoration: underline;
+ }
+
 @media screen and (max-width: 880px) {
     .nav {
-        visibility: hidden;
+        display: none;
     }
   }
 
@@ -182,7 +213,277 @@ body {
     .catch {
        height: 330px;
        background-size: 100%;
-       margin-top: -19%;
        margin-left: -1.4%;
+       margin-top: -8%;
   }
 }
+
+
+/* under here is for the products pages */
+
+.products {
+    width: 100%;
+    height: 24rem;
+    margin-left: -8px;
+    display: grid;
+    grid-template-columns: 0.5fr repeat(3, 1fr) 0.5fr; 
+    grid-template-rows: 0.4fr 1fr repeat(2, 0.2fr); 
+    grid-column-gap: 80px;
+    grid-row-gap: 0px; 
+    margin-bottom: 2rem;
+    font-size: large;
+}
+
+@media screen and (max-width: 880px) {
+    .products {
+        height: 11rem;
+        font-size: x-small;
+        grid-column-gap: 40px;
+    }
+  }
+
+.prod1 {
+    display: grid;
+    grid-area: 2 / 2 / 3 / 3;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.text1 {
+    display: grid;
+    grid-area: 3 / 2 / 4 / 3;
+    height: auto;
+    width: auto;
+    text-align: center;
+    align-content: center;
+    padding-bottom: 10px;
+}
+
+.prod2 {
+    display: grid;
+    grid-area: 2 / 3 / 3 / 4;
+    width: auto;
+    height: auto;
+}
+
+.text2 {
+    display: grid;
+    grid-area: 3 / 3 / 4 / 4;
+    height: auto;
+    width: auto;
+    text-align: center;
+    align-content: center;
+    padding-bottom: 10px;
+}
+
+.prod3 {
+    display: grid;
+    grid-area: 2 / 4 / 3 / 5;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.text3 {
+    display: grid;
+    grid-area: 3 / 4 / 4 / 5;
+    height: auto;
+    width: auto;
+    text-align: center;
+    align-content: center;
+    padding-bottom: 10px;
+}
+
+.products > a {
+    text-align: center;
+    align-content: center;
+}
+
+.prod1 > img {
+    width:100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.prod2 > img {
+    width:100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.prod3 > img {
+    width:100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.list-parent {
+    display: flex;
+    width: 80%;
+    background-color: black;
+    height: 20rem;
+    column-gap: 10rem;
+    margin: auto;
+}
+
+
+.detail-parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(5, 1fr);  
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
+    height: 40rem;
+    width: 82%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 880px) {
+    .detail-parent {
+        height: 28rem;
+    }
+  }
+
+.detail-image {
+    display: grid;
+    grid-area: 1 / 1 / 6 / 3; 
+}
+
+.detail-image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 880px) {
+    .detail-image {
+        grid-area: 1 / 1 / 6 / 5;
+    }
+  }
+
+.detail-product {
+    display: grid;
+    grid-area: 1 / 3 / 3 / 5;
+    border-bottom: 1px solid #0068ff;
+}
+
+.detail-product > h1 {
+    margin-left: 20px;
+}
+
+.detail-product > h2 {
+    margin-left: 20px;
+    font-size: 50px;
+}
+
+.detail-product > a {
+    margin-left: 20px;
+}
+
+.detail-cart {
+    display: grid;
+    grid-area: 3 / 3 / 5 / 5;
+}
+
+.detail-cart > h1 {
+    margin-left: 20px;
+}
+
+.size-select {
+    width: 180px;
+    height: 30px;
+    margin-left: 20px;
+    font-size: x-large;
+    color: #0068ff;
+    margin-top: -7%;
+}
+
+.color-display {
+    border: #0068ff 1px solid;
+    width: 40px;
+    height: 25px;
+    margin-left: 22px;
+    margin-top: -8%;
+}
+
+.detail-cart > h2 {
+    margin-left: 20px;
+    margin-top: -4%;
+    font-size: xx-large;
+}
+
+.color-display > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.detail-info {
+    display: grid;
+    grid-area: 5 / 3 / 6 / 5;
+    margin-left: 20px;
+}
+
+.add-cart {
+    background-color: #1f79ff;
+    color: white;
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 3.3rem;
+    font-size: larger;
+}
+
+.add-cart:hover {
+    background-color: white;
+    color: #1f79ff;
+    border: 1px solid #1f79ff;
+}
+
+
+
+
+@media screen and (max-width: 880px) {
+    .detail-cart, .detail-product, .detail-info {
+        display: none;
+    }
+  }
+
+  .phone-parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, 1fr); 
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: 0 auto;
+    background-color: pink;
+    height: 14rem;
+    width: 82%;
+  }
+
+  .phone-product {
+    display: grid;
+    grid-area: 1 / 1 / 3 / 3;
+    background-color:aqua;
+  }
+
+  .phone-cart {
+    display: grid;
+    grid-area: 1 / 3 / 3 / 4;
+    background-color: violet;
+  }
+
+  .phone-info {
+    display: grid;
+    grid-area: 3 / 1 / 4 / 4;
+    background-color: purple;
+  }
+
+  @media screen and (min-width: 880px) {
+    .phone-parent, .phone-cart, .phone-product, .phone-info {
+        display: none;
+    }
+  }
